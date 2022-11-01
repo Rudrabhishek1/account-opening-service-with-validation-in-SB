@@ -28,10 +28,10 @@ public class AccountController {
         return accountService.getAllAccount();
     }
     //Put/Update method Controller.
-    @PutMapping("/update_account/{account_no}/{name}")
-    public String updateAccount(@PathVariable long account_no,@PathVariable String name){
+    @PutMapping("/update_account/{account_no}/{name}/{pan_no}/{aadhar_no}/{amount}")
+    public String updateAccount(@PathVariable long account_no,@PathVariable String name,@PathVariable String pan_no,@PathVariable String aadhar_no,@PathVariable String amount){
 
-        return   accountService.updateAccount(account_no,name);
+        return   accountService.updateAccount(account_no,name,pan_no,aadhar_no,amount);
     }
     //Put/Update method controller via JSON object
 /*    @PutMapping("update_account_body")
